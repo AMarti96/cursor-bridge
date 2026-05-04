@@ -1,0 +1,6 @@
+{
+  "workspaces": {
+    "myproject": "/path/to/myproject",
+    "anotherproject": "/path/to/anotherproject"
+  }
+}

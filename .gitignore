@@ -1,0 +1,6 @@
+node_modules/
+.env
+workspaces.json
+state.json
+*.log
+dist/

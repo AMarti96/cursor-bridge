@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.cursor-bridge</string>
+
+    <!-- Replace YOUR_NODE_BIN with the output of: which npx -->
+    <key>ProgramArguments</key>
+    <array>
+        <string>YOUR_NODE_BIN/npx</string>
+        <string>tsx</string>
+        <string>bridge.ts</string>
+    </array>
+
+    <!-- Replace with the absolute path to where you cloned cursor-bridge -->
+    <key>WorkingDirectory</key>
+    <string>/path/to/cursor-bridge</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <!-- Adjust PATH so npx/node are found; add any extra dirs your tools need -->
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+
+        <key>CURSOR_API_KEY</key>
+        <string>your_cursor_api_key_here</string>
+
+        <key>CURSOR_CWD</key>
+        <string>/path/to/your/default/project</string>
+
+        <!-- Optional: resolve command names to absolute paths for MCP servers
+        <key>BRIDGE_CMD_uvx</key>
+        <string>/home/youruser/.local/bin/uvx</string>
+        <key>BRIDGE_CMD_npx</key>
+        <string>/usr/local/bin/npx</string>
+        -->
+    </dict>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>KeepAlive</key>
+    <true/>
+
+    <!-- Replace with absolute paths for log files -->
+    <key>StandardOutPath</key>
+    <string>/path/to/cursor-bridge/bridge.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/path/to/cursor-bridge/bridge.err.log</string>
+</dict>
+</plist>
